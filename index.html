@@ -12,19 +12,19 @@
         color: #eeee33;
       }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
   </head>
   <body>
-    <h1 class="element"></h1>
+    <div id="typed-strings">
+      <h1>Hello, I am <strong>mrLeviner</strong>...</h1>
+      <h1>It is a pleasure to make your acquaintance.</h1>
+    </div>
+    <span id="typed"></span>
   </body>
-  <script>
-    import Typed from typed.js;
-    
-    var options = {
-      strings: ['<i>Hello,</i> I am mrLeviner....', '&amp; It is a pleasure to meet you.'],
-      typeSpeed: 40
-    }
-    
-    var typed = new Typed('.element', options);
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9">
+      window.onload = function() {
+        var typed = new Typed('#typed', {
+          stringsElement: '#typed-strings'
+        });
+      }
   </script>
 </html>
